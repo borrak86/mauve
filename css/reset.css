@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document reset.css 문서만들기=>스타일선언하기
+*/
+/* 모든태그요소(*)의 여백제거*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button
+{margin:0;padding:0}
+/* 리스트목록 제거 ul,ol,dl,li*/
+ul,ol,dl,li{ list-style:none;}
+/* 외곽선제거 (폼외곽선, 링크된이미지외곽선제거)*/
+fieldset, a img{ border:0 none;}
+/* 테이블 외곽선 처리*/
+table{ border-collapse:collapse;}
+/* 숨김요소 선언하기*/
+.hid{ text-indent:-9999px; font-size:0; line-height:0; width:0; height:0; }
+.dis{ display:none;}/* 태그요소를 안보이게설정(크기도제거)*/
+/*인나인요소의 세로정렬설정*/
+input,select,textarea,button{vertical-align:middle;}
+/*문서의 기본링크스타일*/
+a{text-decoration:none; color:#999;} /*공통링크스타일*/
+a:hover{ color:black; text-decoration:underline;} /*롤오버링크된글자색,밑줄설정*/
+a:active{ color:#999;}/*클릭하는순간*/
+a:visited{ color:#999;} /*클릭하고난후*/
+/*문서전체의 기본 폰트스타일*/
+body{font-size:13px;line-height:1.5;
+font-family:Arial, Helvetica, sans-serif,'나눔고딕',dotum,'돋움',sans-serif;
+color:#333;}
+
+
+
+
+
+
+
