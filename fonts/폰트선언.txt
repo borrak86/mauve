@@ -1,0 +1,15 @@
+﻿ 웹 폰트 호환성 문제
+•IE 6~8 브라우저는 EOT 형식만 지원한다.
+•크롬, 사파리, 파이어폭스, 오페라 브라우저는 WOFF 형식만 지원한다.
+•IE 9 브라우저는 EOT, WOFF 형식을 모두 지원한다.
+
+local(※) : IE 6~8 브라우저가 WOFF 글꼴을 내려받지 않도록 방어 코드를 작성하는 것이 핵심
+
+@font-face {
+    font-family:'NanumGothic';
+    src: url('font/NanumGothic.eot'); 
+    src: local('※'),url('font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('font/NanumGothic.woff') format('woff'); 
+	font-style:normal;
+	font-weight:normal;
+}
