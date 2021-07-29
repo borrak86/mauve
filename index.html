@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="윤선생영어교실홈페이지">
+<meta name="keywords" content="윤선생,윤선생영어교실">
+<title> 윤선생 영어교실 </title>
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/reset.css" rel="stylesheet">
+<link rel="stylesheet" href="css/ui.totop.css" >
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.easing.1.3.min.js"></script>
+<script src="js/scroll_menu.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script>
+$(function() {
+$().UItoTop({ easingType: 'easeOutQuart' });
+});
+    $(function(){
+    $("#menu .sub").css({display:"none"});
+    $("#menu>li").hover(
+	function(){
+		$(this).find("ul").css({display:"block", height:0,opacity:"0"})
+		.stop()
+		.animate({height:200,opacity:"1"}, 400);
+		$(this).find("a:first").addClass("on");
+	},
+	function(){
+		$(this).find("ul").stop()
+		.animate({height:0}, 400,function(){
+		 $(this).css({display:"none"});
+			});
+		$(this).find("a:first").removeClass("on");
+	});
+});
+    $(function () {
+      // Slideshow 1
+      $("#mainslide").responsiveSlides({
+		maxwidth:"auto",
+        speed: 800
+      });
+    });
+    $(document).ready(function(){
+       $('#nav-icon3').on('click',function(){
+           if($(this).hasClass('open')){
+               $(this).removeClass('open');
+               $('.popup-menu').fadeOut(250);
+           }
+           else{
+               $(this).addClass('open');
+               $('.popup-menu').fadeIn(250);
+           }
+       }) 
+    });    
+
+
+    
+</script>
+
+<style>
+*{margin: 0;padding: 0;}
+.wrap { width:100%; margin:0 auto;}
+    body{overflow-x: hidden}
+    #headerwrap{width: 100%;height: auto;background: rgba(0,0,0,0.75);position: absolute;display: inline;z-index: 9999}
+    #header{width: 100%;height: 100px;margin: 0 auto}
+    
+    #h1{position: fixed; background-image: url(images/logo_black.png)}
+    
+    #h2{}
+    #menu{position: absolute;left: 240px;top: 0;width: 1440px;}
+    #menu>li{list-style: none;position: relative; width: 240px;float: left;text-align: center;}
+    #menu>li>a{display: block;text-decoration: none;color: #fff;line-height: 100px;}
+    #menu>li>ul{border-top: 10px solid #c23650;position: absolute;top: 90px;width: 240px;height: auto;}
+    #menu>li>ul>li{width: 240px;height: 40px;text-align: center;background: rgba(255,255,255,0.8)}
+    #menu>li>ul>li>a{display: block;font-size: 14px;color: #4c4c4c;line-height: 40px;text-decoration: none;}
+    #menu>li>ul>li>a:hover{font-weight: bold;color: #c23650;}
+    
+#top_menu { position: fixed;right: 140px;top:372px; width:20px; height:260px; margin:0 auto;text-align:center;z-index: 99999;}
+#top_menu ul {float: left;}
+#top_menu ul li {margin:0 0 20px 0;background: rgba(225,225,225,.6);width: 18px;height: 18px;}
+#top_menu ul li:hover{background: rgba(117,39,49,1);}
+#top_menu ul li a {display: none;}
+
+#contents { width:100%; height:auto;}
+        
+    #menu1wrap{z-index: 0}
+    #mainslide{position: relative;list-style: none;overflow: hidden;width: 100%;padding: 0;margin: 0;}
+    #mainslide li {   -webkit-backface-visibility: hidden;position: absolute;   display: none;  width: 100%;  left: 0;  top: 0;}
+    #mainslide li:first-child {  position: relative;  display: block;  float: left;}
+    #mainslide img {display: block;  height: auto;  float: left;  width: 100%;  border: 0;}
+    
+    .maintext{position: absolute;left: 240px; top: 614px;color: #fff}
+    .maintext span{}
+    .maintext p{font-size: 40px;}
+    .maintext a{font-size: 20px;color: #fff;text-decoration: none}
+    #mainslide li:nth-of-type(1) div{top: 580px;left: 1200px;}
+    #mainslide li:nth-of-type(3) div{top: 365px;left: 207px;}
+    #mainslide li:nth-of-type(4) div{top: 390px;left: 318px;}
+
+#menu1wrap {width:100%; height:990px;background:#fff;}
+#menu2wrap {width:100%; height:990px; background:#fff;}
+    .yoonswrap{position: absolute;top: 990px; width: 100%; height: auto;}
+    .yoonswrap>.logo{position: relative;top: 140px;left: 43.5%;}
+    .yoonswrap>a>img{}
+    .yoonswrap>#underBar{position: relative;top: 150px;width: 141px;height: 4px;background: #747474;margin: 50px auto;}
+    .yoonswrap>p{position: relative;top: 190px}
+    .yoonswrap>p>span{display: block;text-align: center;}
+    .baricon{position: absolute;top: 597px;}
+    
+#menu3wrap {position: absolute;top: 1980px; width:100%; height:990px;background:#f6f5f4;}
+    #courseWrap{}
+    #courseWrap h3{font-size: 25px;margin-bottom: 10px;}
+    #courseWrap a{text-align: left;color: #fff;position: relative;top: 200px;left: 600px;text-decoration: none;transition: all .5s;}
+    #box1{width: 600px;height: 500px;background-color: rgba(0,0,0,.5);position: relative;left: 0;top: 245px;float: left;margin-right: 50px;}
+    #box1 .img{width: 600px; height: 500px;position: relative;background-image: url(images/child.png);transition: all .4s;background-position: -30px 0;background-repeat: no-repeat;background-size: 110%;opacity: 1;}
+    #box1:hover .img{ background-position: 0 0; opacity: 0.8;}
+    #box1:hover a{left: 30px;}
+    
+    #box2{width: 600px;height: 500px;background-color: rgba(0,0,0,.5);position: relative;left: 0;top: 245px;float: left;margin-right: 50px;}
+    #box2 .img{width: 600px; height: 500px;background-color: #752731;}
+    #box2:hover .img{ background-position: 0 0; opacity: 0.8;}
+    #box2:hover a{left: 30px;}
+    
+    #box3{width: 600px;height: 500px;background-color: rgba(0,0,0,.5);position: relative;left: 0;top: 245px;float: left;}
+    #box3 .img{width: 600px; height: 500px;position: relative;background-image: url(images/adult.png);transition: all .4s;background-position: -30px 0;background-repeat: no-repeat;background-size: 110%;opacity: 1;}
+    #box3:hover .img{ background-position: 0 0; opacity: 0.8;}
+    #box3:hover a{left: 30px;}
+    
+#menu4wrap {position: absolute;top: 2970px; width:100%; height:990px;padding: 200px 0;}
+    #backimage{width: 100%;height: 990px;background-color: rgba(0,0,0,1);background-image: url(images/fix.png);background-attachment: fixed;background-position: center;}
+    #backimage div{position: relative;top: 300px;width: 100%;height: 312px;background-color:rgba(0,0,0,0.2)}
+    #backimage p{text-align: right;position: relative;right: -600px;top: 30%;font-size: 15px;color: #fff;transition: all .5s}
+    #backimage:hover p{right: 200px;}
+    #backimage:hover{}
+    
+#menu5wrap {position: absolute;top: 3960px; width:100%; height:990px;background:#fff;}
+    .childwrap{position: relative;top: 90px;left: 240px;}
+    .childwrap div{float: left;}
+    .childwrap .cwrap2{margin-top: -5px}
+    .childwrap a{width: 600px;height: 400px;background: #6e6969;float: left;}
+    .childwrap #course2{background: #464040;}
+    .childwrap p{color: #fff;text-align: center;font-size: 20px;position: relative;top: 185px;}
+    
+#menu6wrap {position: absolute;top: 4950px; width:100%; height:990px;background:#f6f5f4;}
+    #middlewrap{position: relative;left: 240px;top: 145px;overflow: hidden}
+    #middlewrap div{float: left;margin-right: 30px;width: 460px;height: 700px;}
+    #middlewrap .img:nth-of-type(1){background-image: url(images/6p1.png);}
+    #middlewrap .img:nth-of-type(2){background-image: url(images/6p2.png);}
+    #middlewrap .img:nth-of-type(3){background-image: url(images/6p3.png);}
+    #middlewrap .underbox{background-color: rgba(203,3,35,1);height: 800px;position: relative;top: 600px;transition: all .4s;}
+    #middlewrap .img:hover .underbox{top: -100px;background-color: rgba(107,7,23,.5);}
+    #middlewrap p{color: #fff;font-size: 40px;position: relative;}
+    #middlewrap div:nth-of-type(1) p{top: 166px;left: 92px;}
+    #middlewrap div:nth-of-type(2) p{top: 411px;left: 59px;}
+    #middlewrap div:nth-of-type(3) p{top: 306px;left: 55px;color: rgba(203,3,35,1);}
+    .underbox p{color: #fff;}
+    
+    
+#menu7wrap {position: absolute;top: 5940px; width:100%; height:990px;}
+    
+    #adultwrap div{float: left;width: 471.5px;height: 445px;background: #752731;overflow: hidden}
+    #adultwrap p{margin: 20px;font-size: 35px;color: #fff;position: relative;top: -200px;transition: all .5s}
+    #adultwrap a{font-size: 18px;display: block}
+    #adultwrap div:hover p{top: 170px;}
+    #adultwrap div:nth-of-type(1){width: 960px;height: 890px;}
+    #adultwrap div:nth-of-type(5){background: #360f13;}
+    #adultwrap .img{background-image: url(images/7p1.png);}
+    #adultwrap .img1{background-image: url(images/7p2.png)}
+    #adultwrap .img2{background-image: url(images/7p3.png)}
+    
+    #footerwrap{}
+    #footer{position: absolute;bottom: 0; height: 100px;width: 100%;background: #333;float: left;}
+    #footer img{position: relative;top: 10px;left: 28%;}
+    #footer p{position: relative;left: 50%;color: #818181;float: left;margin-top: 15px;font-size: 12px;}
+    #footer span{display: block;}
+    #footer span:nth-of-type(3){margin-top: 10px;color: #fff;}
+    
+article{ width:100%; margin:0 auto;}
+
+    
+    </style>
+</head>
+<body>
+<div class="wrap">
+<div id="top_menu">
+<ul>
+<li><a href="#">MENU1</a></li>
+<li><a href="#">MENU2</a></li>
+<li><a href="#">MENU3</a></li>
+<li><a href="#">MENU4</a></li>
+<li><a href="#">MENU5</a></li>
+<li><a href="#">MENU6</a></li>
+<li><a href="#">MENU7</a></li>
+</ul>
+</div>
+
+ <div id="headerwrap">
+        <header id="header">
+          <div id="h1">
+            
+          </div>
+          <div id="h2">
+              <ul id="menu">
+               <li><a href="#">LEARNING</a>
+               <ul class="sub">
+                   <li><a href="#">학습시스템</a></li>
+                   <li><a href="#">교재안내</a></li>
+               </ul></li>
+               <li><a href="#">CURRICULUM</a>
+               <ul class="sub">
+                   <li><a href="#">CHILD COURSE</a></li>
+                   <li><a href="#">MIDDLE COURSE</a></li>
+                   <li><a href="#">ADULT COURSE</a></li>
+               </ul></li>
+               <li><a href="#">NOTICE</a>
+               <ul class="sub">
+                   <li><a href="#">공지사항</a></li>
+                   <li><a href="#">이벤트</a></li>
+               </ul></li>
+               <li><a href="#">CONSULT</a>
+               <ul class="sub">
+                   <li><a href="#">윤선생찾기</a></li>
+                   <li><a href="#">온라인 상담신청</a></li>
+               </ul></li>
+               <li><a href="#">ABOUT US</a>
+               <ul class="sub">
+                   <li><a href="#">고객문의</a></li>
+                   <li><a href="#">윤선생 지원하기</a></li>
+               </ul></li>
+               <li><a href="#">JOIN US</a>
+               <ul class="sub">
+                   <li><a href="#">회원가입</a></li>
+                   <li><a href="#">로그인</a></li>
+                   <li><a href="#">비밀번호찾기</a></li>
+               </ul></li>
+           </ul>
+          </div>
+        </header>
+    </div>
+<section id="contents">
+<div id="menu1wrap">
+<article>
+<div id="contents1">
+          <ul id="mainslide">
+              <li class="slider1"><a href="#"><img src="images/main_1.png" alt="체리">
+                 <div class="maintext">
+                  <span>NEW PACKAGE EVENT(12/01~12/31)</span>
+                  <p>똑똑한 체리피커</p>
+                  <p>당신을 위한 패키지</p>
+              </div></a></li>
+              <li class="slider2"><a href="#"><img src="images/main_2.png" alt="의자">
+              <div class="maintext">
+                  <span>PROMOTION EVENT(12/01~12/31)</span>
+                  <p>새학기 새내기를 위한</p>
+                  <p>할인 프로모션</p>
+              </div></a></li>
+              <li class="slider3"><a href="#"><img src="images/main_3.png" alt="인스타">
+              <div class="maintext">
+                  <span>INSTAGRAM EVENT(12/01~12/31)</span>
+                  <p>인스타 오픈이벤트</p>
+                  <p>팔로우하고 미국가자</p>
+              </div></a></li>
+              <li class="slider4"><a href="#"><img src="images/main_4.png" alt="전구">
+              <div class="maintext">
+                  <span>IDEA CHALLENGE(12/01~12/31)</span>
+                  <p>반짝이는 당신의 아이디어를</p>
+                  <p>공유해주세요</p>
+              </div></a></li>
+          </ul>
+</div>
+</article>
+</div>
+   
+<div id="menu2wrap"><article>
+    <div class="yoonswrap">
+        <div class="logo"><img src="images/logo_black.png" alt="logo"></div>
+        <div id="underBar"></div>
+        <p>
+            <span>윤선생은 1980년 창사 이래 현재까지 올바른 영어교육에 대한 철학을 변함 없이 지켜왔습니다.</span>
+            <span>해외 선진 영어교육 트렌드를 접목시켜 한국의 영어교육 환경에 적합한 프로그램 연구 개발,</span>
+            <span>시대를 앞선 스마트 학습기기 및 교재의 생산 유통 공급, 국내 최고 수준의 영어교육 전문 교사양성 등 </span>
+            <span>영어교육에 대한 모든 것을 윤선생이 해결해드립니다.</span>
+        </p>
+        <div class="baricon"><img src="images/baricon1.png" alt=""></div>
+    </div>
+</article></div>
+
+<div id="menu3wrap"><article>
+    <div id="courseWrap">
+      <div id="box1">
+          <div class="img"><a href="#">
+                  <h3>CHILD COURSE</h3>
+                  <span></span>
+                  <p>취학 전 영유아 및</p>
+                  <p>초등학생들을 위한 윤선생</p>
+                  </a></div>
+      </div>
+      <div id="box2">
+          <div class="img"><a href="#">
+                 <h3>MIDDLE COURSE</h3>
+                  <span></span>
+                  <p>영유아부터 성인까지 함께해요 윤선생</p>
+                  </a></div>
+      </div>
+      <div id="box3">
+          <div class="img"><a href="#">
+                  <h3>ADULT COURSE</h3>
+                  <span></span>
+                  <p>직장인을 위한</p>
+                  <p>비즈니스 영어 전문 윤선생</p>
+                  </a></div>
+      </div>
+ </div>
+</article></div>
+<div id="menu4wrap"><article>
+    <div id="backimage"><div>
+            <p>윤선생은 우리 아이들을 국내의 영어교육 환경 하에서도</p>
+            <p>전 세계 영어사용자와 막힘 없이 의사소통 할 수 있는 글로벌 리더로 키워내겠습니다.</p>
+            <p>우리 아이들의 균형 잡힌 올바른 영어교육을 윤선생이 책임지겠습니다.</p>
+        </div>
+    </div>
+</article></div>
+<div id="menu5wrap"><article>
+    <div class="childwrap">
+       <div class="cwrap1">     
+        <div><a href="#" id="course1"><p>YOONS CHILD COURSE1</p><p>Infant Academy</p></a></div>
+        <div><img src="images/5p1.png" alt=""></div></div>
+        <div class="cwrap2">
+        <div><img src="images/5p2.png" alt=""></div>
+        <div><a href="#" id="course2"><p>YOONS CHILD COURSE2</p><p>Kids Academy</p></a></div>
+        </div></div>
+</article></div>
+<div id="menu6wrap"><article>
+    <div id="middlewrap">
+        <div class="img"><p>BASIC</p><div class="underbox"><p></p></div></div>
+        <div class="img"><p>FLUENT</p><div class="underbox"><p></p></div></div>
+        <div class="img"><p>LEADER</p><div class="underbox"><p></p></div></div>
+    </div>
+</article></div>
+<div id="menu7wrap"><article>
+      <div id="adultwrap">
+         <div class="img"></div>
+         <div><p>PROFESSIONAL<a href="#">View more</a></p></div>
+         <div class="img1"></div>
+         <div class="img2"></div>
+         <div><p>COMMUNICATION<a href="#">View more</a></p></div>
+      </div>
+       <div id="footerwrap">
+        <footer id="footer">
+            <img src="images/footerlogo.png" alt="">
+            <p>
+                <span>서울시 강동구 강동대로 207</span>
+                <span>(강동구 성내동 448-11)</span>
+                <span>ⓒYOONS ENGLISH SCHOOL Since 1980</span>
+            </p>
+        </footer>
+    </div></article></div> 
+</section>
+
+    </div>
+    
+<script>
+    
+    </script>
+</body>
+</html>
